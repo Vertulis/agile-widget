@@ -17,7 +17,7 @@ function DashBoard(){
 
     return(
         <>
-            <div className='side-navbar'>
+            <div className='side-navbar'>  
                 <h1 className='dashboard-heading'>Dashboard</h1>
                 <div style={{border: "0px", padding: "0px"}}>
                     <button className='nav-btn' onClick={displayWeather}><i className="fa-solid fa-cloud fa-xl"></i> Weather</button>
