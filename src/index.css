@@ -346,7 +346,6 @@ body{
     column-gap: 5px;
     row-gap: 5px;
     justify-content: center;
-    background-color: black;
   }
 
   .articles-container{
