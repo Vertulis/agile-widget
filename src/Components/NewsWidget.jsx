@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import NewsCard from './NewsCard.jsx';
+import ArticleCard from './ArticleCard.jsx';
 import axios from 'axios';
 
 const NewsWidget = () => {
@@ -47,7 +47,7 @@ const NewsWidget = () => {
             <div className='articles-container'>
                 {news.map((article, index) => (
                     <div key={index}>
-                        <NewsCard article={article} />
+                        <ArticleCard article={article} />
                     </div>
                 ))}
             </div>

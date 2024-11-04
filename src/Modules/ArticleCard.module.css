@@ -1,0 +1,37 @@
+.articleCard{
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(0,0,0, 0.4);
+    backdrop-filter: blur(6px);
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s;
+  }
+  .articleTitle{
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .articleImage{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 400px;
+    height: 280px;
+  }
+  
+  .articleCard:hover{
+    transform: scale(1.01);
+  }
+  .articleDescription {
+    width: 90%; /* Adjust width as needed */
+    max-height: 150px; /* Use max-height for better control */
+    white-space: normal; /* Allows text to wrap */
+    overflow: hidden; /* Hides overflowed text */
+    text-overflow: ellipsis; /* Displays ellipsis when text overflows */
+    padding: 0 10px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box; /* For Safari support */
+    --webkit-line-clamp: 3; /* Number of lines before ellipsis */
+    --webkit-box-orient: vertical; /* Required for line clamping */
+  }
