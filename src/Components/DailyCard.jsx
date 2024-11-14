@@ -1,8 +1,9 @@
+import styles from '../Modules/DailyCard.module.css'
 function DailyCard({ weatherData }) {
     // Check if weatherData is available
     if (!weatherData || !weatherData.list || weatherData.list.length === 0) {
         return (
-            <div className="daily-weather-card">
+            <div className={styles.dailyWeatherCard}>
                 <p>No forecast data available.</p>
             </div>
         );
@@ -31,16 +32,13 @@ function DailyCard({ weatherData }) {
 
                 // Format the date to a readable string (e.g., "Monday, October 15, 2024")
                 const formattedDate = new Intl.DateTimeFormat('en-US', {
-                    weekday: 'long',
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric'
+                    weekday: 'long'
                 }).format(new Date(day));
 
                 return (
-                    <div key={day} className="daily-weather-card">
+                    <div key={day} className={styles.dailyWeatherCard}>
                         <h1>{formattedDate}</h1> {/* Display the formatted local date */}
-                        <p className="description">{(weather[0].description).charAt(0).toUpperCase() + (weather[0].description).slice(1)}</p>
+                        <p className={styles.description}>{(weather[0].description).charAt(0).toUpperCase() + (weather[0].description).slice(1)}</p>
                         <p>{Math.round(main.temp)}&deg;C</p>
                         <p>{main.humidity}%</p>
                     </div>

@@ -1,0 +1,20 @@
+.dailyWeatherCard{
+    display: inline-block; /* Fallback color */
+    background-color: rgba(0,0,0, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .dailyWeatherCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .dailyWeatherCard h1{
+    font-weight: 300;
+    font-size: 1rem;
+  }
