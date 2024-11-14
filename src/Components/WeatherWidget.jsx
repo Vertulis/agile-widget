@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import CurrentWeatherCard from './CurrentWeatherCard.jsx';
 import DailyCard from './DailyCard.jsx';
 import HourlyCard from './HourlyCard.jsx';
+import Searchbar from './Searchbar.jsx';
 
 function WeatherWidget() {
-    const apiKey = "aecec75f9a4d3c6ae97655f8605cf7f8"; // OpenWeatherMap API key
+    const apiKey = "aecec75f9a4d3c6ae97655f8605cf7f8";
     const [location, setCity] = useState("");
     const [view, setView] = useState('hourly');
     const [buttonStyle, setButtonStyle] = useState({
@@ -40,7 +41,7 @@ function WeatherWidget() {
 
     const handleSuggestionClick = (city) => {
         setCity(city);
-        setSuggestions([]); // Clear suggestions after selection
+        setSuggestions([]);
     };
 
     const handleFormSubmission = async (event) => {
@@ -69,30 +70,15 @@ function WeatherWidget() {
 
     return (
         <>
-            <form className='form' onSubmit={handleFormSubmission}>
-                <input
-                    type="text"
-                    value={location}
-                    onChange={handleInputChange}
-                    placeholder="Enter a city"
-                    required
-                />
-                <button className='submit-btn' type="submit">Get weather</button>
-                {/* Render suggestions if available */}
-            {suggestions.length > 0 && (
-                <ul className="suggestions-list">
-                    {suggestions.map((city, index) => (
-                        <li key={index} onClick={() => handleSuggestionClick(city)}>
-                            {city}
-                        </li>
-                    ))}
-                </ul>
-            )}
-            </form>
-            
-            {error && <p className="error">{error}</p>}
+            <Searchbar
+                location={location}
+                suggestions={suggestions}
+                handleInputChange={handleInputChange}
+                handleFormSubmission={handleFormSubmission}
+                handleSuggestionClick={handleSuggestionClick}
+            />
 
-            
+            {error && <p className="error">{error}</p>}
 
             <div className='divider'>
                 <CurrentWeatherCard weatherData={weatherData} />
@@ -107,16 +93,14 @@ function WeatherWidget() {
                     {view === 'hourly' && (
                         <div className='hourly-weather-container'>
                             <HourlyCard weatherData={weatherData} />
-
                         </div>
                     )}
 
                     {view === 'weekly' && (
                         <div className='weekly-weather-container'>
-                                <DailyCard weatherData={weatherData} />
+                            <DailyCard weatherData={weatherData} />
                         </div>
                     )}
-                    
                 </div>
             </div>
         </>

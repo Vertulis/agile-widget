@@ -1,0 +1,32 @@
+.searchbar{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 400px;
+    justify-content: space-between;
+  }
+  .searchbarInput{
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0, 0.4);
+    backdrop-filter: blur(6px);
+    color: white;
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .submitBtn{
+    border: none;
+    background-color: #184EE7;
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s;
+  }
+  .submitBtn:hover{
+    background-color: #E7B118;
+  }
