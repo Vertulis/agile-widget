@@ -4,7 +4,10 @@ import style from '../Modules/Navbar.module.css'
 export default function Navbar(){
     return(
         <div className={style.navbar}>  
-            <h1 className={style.dashboardHeading}>Dashboard</h1>
+            
+            <NavLink to="/" className={style.dashboardHeading}>
+                <h1 className={style.dashboardHeading} >Dashboard</h1>         
+            </NavLink>
             <ul>
                 <li>
                     <NavLink to="/weatherWidget" className={({ isActive }) => (isActive ? style.active : '')}>

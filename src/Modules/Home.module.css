@@ -1,0 +1,11 @@
+.greeting{
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+}
+.homeContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}

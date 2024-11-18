@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NewsWidget from './Components/NewsWidget';
 import WeatherWidget from './Components/WeatherWidget';
 import Navbar from './Components/Navbar';
+import Home from './Pages/Home.jsx';
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                 <Routes>
                     <Route path='/newsWidget' element={<NewsWidget />} />
                     <Route path='/weatherWidget' element={<WeatherWidget />} />
-                    <Route path='/' element={<h1>Welcome to the Dashboard</h1>} />
+                    <Route path='/' element={<Home />} />
                 </Routes>
             </div>
         </BrowserRouter>

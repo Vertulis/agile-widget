@@ -6,7 +6,7 @@
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
-  background-color: #184EE7;
+  background-color: hsl(224, 44%, 13%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -29,17 +29,14 @@
 }
 
 .navbar a.active {
-  background-color: #E7B118;
-  color: hsl(0, 0%, 95%);
+  color: #E7B118;
 }
 
 .navbar a:hover {
-  color: hsl(0, 0%, 100%);
-  background-color: #E7B118;
+  color: #E7B118;
 }
 
 .dashboardHeading {
   font-weight: 300;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 10px;
 }
